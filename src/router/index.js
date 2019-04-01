@@ -1,11 +1,10 @@
 import express from 'express';
 
-const router = express.Router();
-
+import apis from './api';
 import home from './home';
 
-import apis from './api';
-
+const router = express.Router();
 router.get('/',home);
-router.use('/api',apis);
+router.use('/api', apis);
+
 export default router;

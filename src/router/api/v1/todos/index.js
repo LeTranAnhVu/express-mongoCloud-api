@@ -1,15 +1,18 @@
-import express from 'express';
-import all from './all';
-import single from './single';
-import create from './create';
+import express from 'express'
+import all from './all'
+import single from './single'
+import create from './create'
+import deleteUsers from './delete'
+import update from './update'
 
-// import bodyParser from 'body-parser';
-// const jsonParser = bodyParser.json();
+const todos = express.Router()
+todos.get('/', all)
+todos.post('/', create)
+todos.delete('/', deleteUsers)
 
-const todos = express.Router();
-todos.get('/',all);
-todos.post('/',create);
-todos.get('/:id',single);
+todos.get('/:id', single)
+todos.put('/:id', update)
+todos.delete('/:id', deleteUsers)
 
 
-export default todos;
+export default todos
