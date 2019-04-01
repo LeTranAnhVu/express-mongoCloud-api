@@ -4,6 +4,7 @@ export default function(req, res, next){
         const dummy = {
             name: req.body.data.name,
             status: req.body.data.status ? req.body.data.status: false,
+            dateCreated: new Date('2010/02/12')
         };
         todoCtrl.create(dummy).then(todo=>{
             res.status(200).json(todo);

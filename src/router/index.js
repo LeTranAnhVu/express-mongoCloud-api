@@ -1,10 +1,10 @@
-import express from 'express';
+import express from 'express'
 
-import apis from './api';
-import home from './home';
+import apis from './api'
+import home from './home'
 
-const router = express.Router();
-router.get('/',home);
-router.use('/api', apis);
+const router = express.Router()
+router.get('/', home)
+router.use('/api', apis)
 
-export default router;
+export default router

@@ -1,9 +1,9 @@
 import Todo from '../../model/todo'
 
 export default {
-  getAll: function () {
+  getAll: function (query, sort) {
     return new Promise((resolve, reject) => {
-      Todo.find({}, (err, todos) => {
+      Todo.find(query).sort(sort).exec((err, todos) => {
         err ? reject(err) : resolve(todos)
       })
     })
