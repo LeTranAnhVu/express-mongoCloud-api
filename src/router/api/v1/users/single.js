@@ -1,4 +1,4 @@
-import userCtrl from '../../controller/modelController/user';
+import userCtrl from '../../../../controller/modelController/user';
 export default function (req, res, next){
     const id = req.params.id;
     userCtrl.getOneById(id).then((user)=>{

@@ -3,10 +3,9 @@ import express from 'express';
 const router = express.Router();
 
 import home from './home';
-import users from './users';
-import todos from './todos';
+
+import apis from './api';
 
 router.get('/',home);
-router.use('/users',users);
-router.use('/todos', todos);
+router.use('/api',apis);
 export default router;

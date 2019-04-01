@@ -1,4 +1,4 @@
-import userCtrl from '../../controller/modelController/user';
+import userCtrl from '../../../../controller/modelController/user';
 export default function (req, res, next){
     userCtrl.getAll().then((users)=>{
         res.status(200).json({data: users});

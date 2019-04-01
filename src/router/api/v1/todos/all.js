@@ -1,4 +1,4 @@
-import todoCtrl from '../../controller/modelController/todo';
+import todoCtrl from '../../../../controller/modelController/todo';
 
 export default function(req, res, next){
     todoCtrl.getAll().then(todos=>{
